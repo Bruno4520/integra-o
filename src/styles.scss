@@ -64,39 +64,16 @@ h6 {
 .displayTable {
   display: table;
   width: 100%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
+  height: 100%;
+  background-image: url("assets/background.jpg");
+  
+  height: 100%;
 
-  background: linear-gradient(to right, #6C63FF, #4C9BFF);
-  animation: gradientAnimation 10s ease infinite alternate;
+    /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  /* Adicionando uma transição suave e uma sombra sutil */
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
-
-/* Efeito de gradiente animado */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Efeito de escala ao passar o mouse */
-.displayTable:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
-}
-
 
 .displayTableCell {
   display: table-cell;

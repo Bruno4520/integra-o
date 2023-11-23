@@ -1,28 +1,53 @@
-.img-perfil {
+.avatar {
     width: 130px;
     height: 130px;
-    border-radius: 100%;
+    border-radius: 50%;
     margin: 0.5rem;
     background-image: url(../../../assets/dummy-user.png);
-    background-size: 130px 130px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.7);
+    transition: transform 0.3s ease-in-out;
 }
 
-input{
+.avatar:hover {
+    transform: scale(1.1);
+}
+
+input {
     margin-bottom: 17px;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    color: #3498db;
+    background-color: #1a1a1a;
+    transition: border-color 0.3s ease-in-out;
 }
 
-label{
-    font-size: 14px;
-    font-weight: 400;
+input:focus {
+    border-color: #00bcd4;
 }
 
-.container-fluid{
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #3498db;
+}
+
+.container-fluid {
     overflow: hidden;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.formGroup2{
+.formGroup2 {
     float: left;
     width: 100%;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
 }

@@ -1,44 +1,61 @@
 .card {
     margin-top: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #37474F; /* Cor da borda */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-    background-color: #1D2D47;
+    background-color: #263238; /* Cor de fundo principal */
+    color: #ffffff; /* Cor do texto */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    background-color: #546E7A; /* Cor de fundo ao passar o mouse */
+  }
+  
+  .card-header {
+    background-color: #1D2D47; /* Cor de fundo do cabeçalho */
     color: #fff;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #37474F; /* Cor da borda inferior do cabeçalho */
     border-radius: 8px 8px 0 0;
-    h2{
-        margin-left: 10px;
-        margin-top: 5px;
-    }
-}
-
-.card-body {
+  }
+  
+  .card-header h2 {
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  
+  .card-body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-}
-
-.exercise-info {
+  }
+  
+  .exercise-info {
     flex-grow: 1;
-}
-
-.exercise-info p {
+  }
+  
+  .exercise-info p {
     margin-bottom: 10px;
-}
-
-.exercise-image {
+  }
+  
+  .exercise-image {
     max-width: 200px;
     text-align: right;
     margin-right: 40px;
-}
-
-.exercise-image img {
+  }
+  
+  .exercise-image img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
-}
+  }
+  
+  .exercise-info p.obs {
+    text-align: justify;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-indent: 2px;
+  }
+  
