@@ -1,0 +1,68 @@
+<!-- Top navigation -->
+<nav class="navbar navbar-dark fixed-top bg-dark p-0 shadow d-flex">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
+    <img class="brand-logo" src="../../../assets/logo.jpg" alt="Logo">
+    <h1 class="navbar-brand flex-grow-1">Destino Certo</h1>
+  </a>
+</nav>
+<!-- Sidebar navigation -->
+<div class="container-fluid">
+  <div class="row">
+
+    <nav class="mainS col-md-2 d-md-block bg-light sidebar">
+      <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+              <i class="fa fa-child" aria-hidden="true"></i>Passagens adcionadas
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/register-exercise" routerLinkActive="active">
+              <i class="fa fa-plus" aria-hidden="true"></i>Adicionar novas passagens
+            </a>
+          </li>
+          <!-- Calling SignOut() Api from AuthService -->
+          <li class="nav-item">
+            <a class="nav-link" (click)="authService.SignOut()">
+              <i class="fas fa-sign-out-alt"></i>Sair
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main role="main" class="mainS col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="inner-adjust">
+    
+        <div class="exercise-list">
+    
+          <div *ngFor="let exercise of Exercise" class="exercise-card">
+
+            <div class="exercise-header">
+              <h4>{{ exercise.name }} ({{ exercise.equipment }})</h4>
+            </div>
+
+            <div class="bar"></div>
+
+            <p><strong>Descrisao: </strong> {{ exercise.primaryGroup }}</p>
+
+            <p *ngIf="exercise.secondaryGroup"><strong>Local:</strong> {{ exercise.secondaryGroup }}</p>
+
+            <div class="button-container">
+              <span routerLink="/update-student/{{exercise.eid}}" class="btnDash1 btn-primary">Edit</span>
+              <span (click)="removeExercise(exercise)" class="btnDash1 btn-link">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </span>
+            </div>
+
+          </div>
+    
+        </div>
+    
+      </div>
+    </main>
+
+  </div>
+</div>

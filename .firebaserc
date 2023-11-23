@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "teste-1e6d5": {
+      "hosting": {
+        "angularfiebase-authentication": [
+          "teste-1e6d5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "teste-1e6d5"
+  }
+}
