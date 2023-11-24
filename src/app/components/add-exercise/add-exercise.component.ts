@@ -56,7 +56,7 @@ export class AddExerciseComponent implements OnInit {
   submitExerciseData() {
     let eid = new Date().getTime().toString(); 
     this.crudApi.SetExerciseData(eid, this.exerciseForm.value);
-    window.alert('Exercício adicionado com sucesso!');
+    window.alert('');
     this.ResetForm();
   }
 }

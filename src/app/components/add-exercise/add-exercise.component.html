@@ -1,7 +1,9 @@
+
+
 <nav class="navbar navbar-dark fixed-top bg-dark p-0 shadow d-flex">
   <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
     <img class="brand-logo" src="../../../assets/logo.jpg" alt="Logo">
-    <h1 class="navbar-brand flex-grow-1">Destino certo</h1>
+    <h1 class="navbar-brand flex-grow-1">Destino Certo</h1>
   </a>
 </nav>
 
@@ -15,7 +17,7 @@
         <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
-              <i class="fa fa-child" aria-hidden="true"></i>Viagens adcionadas
+              <i class="fa fa-child" aria-hidden="true"></i>Viagens
             </a>
           </li>
           <li class="nav-item">
@@ -38,7 +40,7 @@
       <div class="inner-adjust">
 
         <div class="pt-3 pb-2 mb-3 border-bottom">
-          <h2 class="h2">Adicionar viagens</h2>
+          <h2 class="h2">Adicionar Viagens</h2>
         </div>
         
         <form [formGroup]="exerciseForm" (ngSubmit)="submitExerciseData()" novalidate>
@@ -54,40 +56,46 @@
                     />
                               <!-- errors-->
                               <p *ngIf="name.touched && name.invalid" class="error">
-                                <sup>*</sup>Por favor informe o nome do exercício
+                                <sup>*</sup>Por favor informe o nome da passagem
                               </p>
                               <p *ngIf="name.errors?.['minlength']" class="error">
                                 <sup>*</sup>O nome não deve ter menos de 2 caracteres
                               </p>
                 
-                  <label>Descrisao</label>
+                  <label>Estrelas</label>
                     <input 
                       type="text" 
                       formControlName="primaryGroup" 
                       class="form-control2" 
                     />
         
-                  <label>Grupos auxiliares</label>
+                  <label>Imagem</label>
                     <input 
                       type="text" 
                       formControlName="secondaryGroup" 
                       class="form-control2" 
                     />
                 
-                  <label>Equipamento</label>
+                  <label>Local</label>
                     <input 
                       type="text" 
                       formControlName="equipment" 
                       class="form-control2" 
                     />
-        
-                    <label>imgId</label>
+
+                  <label>Preço</label>
+                    <input 
+                      type="text" 
+                      formControlName="obs" 
+                      class="form-control2" 
+                    />
+
+                  <label>Descrisao</label>
                     <input 
                       type="text" 
                       formControlName="imgId" 
                       class="form-control2" 
                     />
-                  
               </div>
             </div>
               <div class="form-group2 text-right">
@@ -99,6 +107,7 @@
                   Reset
                 </button>
                 <button
+            
                   type="submit"
                   class="btn btn-success"
                   [disabled]="!exerciseForm.valid"
